@@ -1,0 +1,23 @@
+﻿@using MVCProject.ViewModels
+@model TrainDataWithCrsResultViewModel
+@{
+        ViewData["Title"] = "Trainee Data";
+}
+
+<h1>Trainee Data</h1>
+
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <div style="text-align: center; border: 2px solid black; padding: 20px; min-width: 400px; margin: 20px 0; background-color: #f4f4f4;">
+        <img src="~/Images/@Model.ImageURL" alt="Product Image" style="max-width: 100%; max-height: 200px;">
+        <div style="padding: 10px; color: @Model.Color">
+            <h2 style="margin: 10px 0;">@Model.TraineeName</h2>
+            <p style="font-weight: bold; margin: 10px 0;">Course: @Model.CourseName</p>
+            <p style="font-weight: bold; margin: 10px 0;">Degree: @Model.Degree</p>
+        </div>
+        <a href="../.././ShowTraineeResult/@Model.TraineeId" style="text-decoration: none; color: #007bff; font-weight: bold;">Show All Courses Results</a>
+        <hr />
+        <a href="../.././ShowCourseResult/@Model.CourseId" style="text-decoration: none; color: #007bff; font-weight: bold;">Show All Trainees Results in this Course</a>
+    </div>
+    
+</div>

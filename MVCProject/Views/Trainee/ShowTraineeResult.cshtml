@@ -1,0 +1,33 @@
+﻿@model List<MVCProject.ViewModels.CourseResultViewModel>
+@{
+    ViewData["Title"] = "Course Data";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+    }
+</style>
+
+<h1>Trainee Data</h1>
+
+<table>
+    <tr>
+        <th>Course Name</th>
+        <th>Degree</th>
+    </tr>
+    @foreach (var result in Model)
+    {
+        <tr>
+            <td style="color:@result.Color">@result.CourseName</td>
+            <td style="color:@result.Color">@result.Degree</td>
+        </tr>
+    }
+</table>

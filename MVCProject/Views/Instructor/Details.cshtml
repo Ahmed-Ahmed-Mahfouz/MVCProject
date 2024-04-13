@@ -1,0 +1,21 @@
+﻿@model Instructor
+@{
+    ViewData["Title"] = "Instructor Details";
+}
+
+<h1>Instructor Details</h1>
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <div style="text-align: center; border: 2px solid black; padding: 20px; min-width: 400px; margin: 20px 0; background-color: #f4f4f4;">
+        <img src="~/Images/@Model.ImageURL" alt="Product Image" style="max-width: 100%; max-height: 200px;">
+        <div style="padding: 10px;">
+            <h2 style="margin: 10px 0;">@Model.Name</h2>
+            <p style="font-weight: bold; margin: 10px 0;">Department: @Model.Department.Name</p>
+            <p style="font-weight: bold; margin: 10px 0;">Course: @Model.Course.Name</p>
+            <p style="font-weight: bold; margin: 10px 0;">Salary: $@String.Format("{0:N0}", Model.Salary)</p>
+            <p style="font-weight: bold; margin: 10px 0;">Address: @Model.Address</p>
+            
+        </div>
+    </div>
+    <a href="/Instructor/Index" style="text-decoration: none; color: #007bff; font-weight: bold;">Back To Instructors Page</a>
+</div>
